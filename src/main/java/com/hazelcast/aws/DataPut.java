@@ -1,4 +1,4 @@
-package com.java.main;
+package com.hazelcast.aws;
 
 import java.util.TimerTask;
 
@@ -19,6 +19,6 @@ public class DataPut extends TimerTask {
 		now = new Date();
     	IMap<String, String> data = hz.getMap("data");
 	    data.put(now.toString(), "Data");
-	    System.out.println("No of records: " + data.size());
+	    System.out.println("READ: No of records: " + data.size());
 	}
 }

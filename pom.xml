@@ -33,19 +33,23 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<finalName>write</finalName>
-					<archive>
-						<manifest>
-							<mainClass>com.java.main.MainRunInsert</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
+			<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+                <finalName>hazelcast-aws</finalName>
+                <archive>
+                    <manifest>
+                        <mainClass>com.hazelcast.aws.MainRun</mainClass>
+                    </manifest>
+                </archive>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+               <appendAssemblyId>false</appendAssemblyId>
+            </configuration>
 			</plugin>
+			
 		</plugins>
 	</build>
 </project>
