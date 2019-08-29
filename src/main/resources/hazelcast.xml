@@ -1,0 +1,20 @@
+<hazelcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hazelcast.com/schema/config
+                               http://www.hazelcast.com/schema/config/hazelcast-config-3.6.xsd" 
+    xmlns="http://www.hazelcast.com/schema/config">
+    <group>
+        <name>Hazelcast cluster 01</name>
+    </group>
+
+    <network>
+        <join>
+            <multicast enabled="false"/>
+            <tcp-ip enabled="false">
+                <member>xx.xx.xx.xx:8701</member>
+            </tcp-ip>
+            <aws enabled="true">
+                <region>us-east-1</region>
+                <iam-role>Hazelcast-ec2</iam-role>
+            </aws>
+        </join>
+    </network>
+</hazelcast>
