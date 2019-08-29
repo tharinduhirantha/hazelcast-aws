@@ -14,12 +14,12 @@ public class MainRun {
 		String mode = args[0];
 		Timer time = new Timer();
 		
-		if(mode.equals("insert")) {
+		if(mode.toLowerCase().equals("insert")) {
 			System.out.println("Running on INSERT mode");
 			DataPut st = new DataPut();
 			time.schedule(st,0, 5000);
 
-		} else {
+		} else if(mode.toLowerCase().equals("read")){
 			System.out.println("Running on READ mode");
 			DataGet st = new DataGet();
 			time.schedule(st,0, 1000);

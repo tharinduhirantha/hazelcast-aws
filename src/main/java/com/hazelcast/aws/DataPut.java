@@ -19,6 +19,6 @@ public class DataPut extends TimerTask {
 		now = new Date();
     	IMap<String, String> data = hz.getMap("data");
 	    data.put(now.toString(), "Data");
-	    System.out.println("READ: No of records: " + data.size());
+	    System.out.println("INSERT: No of records: " + data.size());
 	}
 }
